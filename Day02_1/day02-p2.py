@@ -11,21 +11,25 @@ with open("input.txt", "r") as file:
 
 #initialization
 score = 0
-draw = 3
-win = 6
 
+outcome = {"X": [('A', 'Z'), ('B', 'X'), ('C', 'Y')],
+           "Y": [('A', 'X'), ('B', 'Y'), ('C', 'Z')], 
+           "Z": [('A', 'Y'), ('B', 'Z'), ('C', 'X')]}
+
+win_draw = {"X": 0, "Y": 3, "Z": 6}
 responseVal = {"X": 1, "Y": 2, "Z": 3}
-victoryScores = {"Z": [('A', 'Y'), ('B', 'Z'), ('C', 'X')]}
-drawScores = {"Y": [('A', 'X'), ('B', 'Y'), ('C', 'Z')]}
 
-for item in games:
-    if item[1] in victoryScores:
-        for item in victoryScores:
-            for tup in item:
-                score += responseVal[item[1]]
-                print(score)
+for round in games:
+    score += win_draw[round[1]]
+    for key, list in outcome.items():
+        #check and see which outcome I need     
+        if round[1] in key:
+            for tup in list:
+                #based on the outcome, check what the opponent played so I can determine what my response score is
+                if round[0] == tup[0]:
+                    score += responseVal[tup[1]]
 
-    
+print("Final Score:", score)
 
 
 
