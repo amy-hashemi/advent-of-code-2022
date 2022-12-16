@@ -1,7 +1,7 @@
 import os
 import csv
 
-cwd = os.chdir("c:\\Users\\AmyHashemi\\Python\\advent-of-code-2022\\Day02_1")
+cwd = os.chdir("c:\\Users\\AmyHashemi\\Python\\advent-of-code-2022\\Day02")
 
 with open("input.txt", "r") as file:
     data = csv.reader(file, delimiter = " ")

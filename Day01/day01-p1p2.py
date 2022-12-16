@@ -1,7 +1,7 @@
 import os
 import heapq
 
-cwd = os.chdir("c:\\Users\\AmyHashemi\\Python\\advent-of-code-2022\\Day01_1-2")
+cwd = os.chdir("c:\\Users\\AmyHashemi\\Python\\advent-of-code-2022\\Day01")
 files = os.listdir(cwd)
 print("files in cwd: %s" % files)
 
