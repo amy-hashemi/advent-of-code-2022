@@ -19,10 +19,12 @@ victoryScores = {"Z": [('A', 'Y'), ('B', 'Z'), ('C', 'X')]}
 drawScores = {"Y": [('A', 'X'), ('B', 'Y'), ('C', 'Z')]}
 
 for item in games:
-    if item[1] in 
-    score += responseVal[]
+    if item[1] in victoryScores:
+        for item in victoryScores:
+            for tup in item:
+                score += responseVal[item[1]]
+                print(score)
 
-print(score)
     
 
 
