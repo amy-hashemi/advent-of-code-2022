@@ -1,6 +1,4 @@
 import os
-import numpy as np
-import pandas as pd
 import csv
 
 cwd = os.chdir("c:\\Users\\AmyHashemi\\Python\\advent-of-code-2022\\Day02_1")
