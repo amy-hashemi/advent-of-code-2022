@@ -8,11 +8,6 @@ cwd = os.chdir("c:\\Users\\AmyHashemi\\Python\\advent-of-code-2022\\Day02_1")
 with open("input.txt", "r") as file:
     data = csv.reader(file, delimiter = " ")
     games = [tuple(line) for line in data]
-    #games = [tuple(line.split()) for line in data]
-
-for line in games:
-    print(line)
-
 
 #initialization
 score = 0
