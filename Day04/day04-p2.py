@@ -1,5 +1,4 @@
 import os
-import string
 import csv
 
 cwd = os.chdir("c:\\Users\\AmyHashemi\\Python\\advent-of-code-2022\\Day04")
