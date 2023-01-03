@@ -12,11 +12,13 @@ def extract_range(first, second, containedCount):
     print(firstRange)
     print(secondRange)
 
-    if (firstRange[0] >= secondRange[0] and firstRange[1] <= secondRange[1]) or (secondRange[0] >= firstRange[0] and secondRange[1] <= firstRange[1]):
-        print("found a fully encapsulated range")
-        containedCount += 1
+    #Updated logic for checking for any overlaps
+    if (firstRange[0] < secondRange[0] and firstRange[1] < secondRange[0]) or (secondRange[0] < firstRange[0] and secondRange[1] < firstRange[0]):
+        print("not a partially encapsulated range")
     else:
-        print("not a fully encapsulated range")
+        print("found a partially encapsulated range")
+        containedCount += 1
+        
 
     return containedCount
 
