@@ -4,7 +4,7 @@ import csv
 
 cwd = os.chdir("c:\\Users\\AmyHashemi\\Python\\advent-of-code-2022\\Day04")
 
-def extract_range(first: list, second: list, containedCount: int) -> int:
+def extract_range(first, second, containedCount):
 
     firstRange = [eval(item) for item in first]
     secondRange = [eval(item) for item in second]
@@ -27,7 +27,7 @@ def main():
             firstRange = row[0].split("-")
             secondRange = row[1].split("-")
             containedCount = extract_range(firstRange, secondRange, containedCount)
-    print("Total fully contained range: ", containedCount)
+            print(containedCount)
 
 
 if __name__ == "__main__":
